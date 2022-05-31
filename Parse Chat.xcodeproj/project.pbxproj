@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CD8BF162846D81700B29219 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD8BF152846D81600B29219 /* ChatCell.m */; };
 		387237065E9C99F856E5CF92 /* Pods_Parse_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD23783B898648A0336A3369 /* Pods_Parse_Chat.framework */; };
 		CFDB5002284540FB00FB85CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDB5001284540FB00FB85CE /* AppDelegate.m */; };
 		CFDB5005284540FB00FB85CE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDB5004284540FB00FB85CE /* SceneDelegate.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CD8BF142846D81600B29219 /* ChatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		0CD8BF152846D81600B29219 /* ChatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		BD23783B898648A0336A3369 /* Pods_Parse_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parse_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDB4FFD284540FB00FB85CE /* Parse Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Parse Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDB5000284540FB00FB85CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +104,8 @@
 				CFDB501A2845481A00FB85CE /* LoginViewController.m */,
 				CFE1BCAB28469DD300FAB5C2 /* ChatViewController.h */,
 				CFE1BCAC28469DD300FAB5C2 /* ChatViewController.m */,
+				0CD8BF142846D81600B29219 /* ChatCell.h */,
+				0CD8BF152846D81600B29219 /* ChatCell.m */,
 			);
 			path = "Parse Chat";
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				CFDB5002284540FB00FB85CE /* AppDelegate.m in Sources */,
 				CFDB5013284540FD00FB85CE /* main.m in Sources */,
 				CFE1BCAD28469DD300FAB5C2 /* ChatViewController.m in Sources */,
+				0CD8BF162846D81700B29219 /* ChatCell.m in Sources */,
 				CFDB5005284540FB00FB85CE /* SceneDelegate.m in Sources */,
 				CFDB501B2845481A00FB85CE /* LoginViewController.m in Sources */,
 			);
