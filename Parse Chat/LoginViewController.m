@@ -41,10 +41,61 @@
         }
     }];
 }
-- (IBAction)onSignUp:(id)sender {
-    [self registerUser];
+
+- (void)loginUser {
+    NSString *username = self.userName.text;
+    NSString *password = self.password.text;
+    
+    [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
+        if (error != nil) {
+            NSLog(@"User log in failed: %@", error.localizedDescription);
+        } else {
+            NSLog(@"User logged in successfully");
+            
+            // display view controller that needs to shown after successful login
+        }
+    }];
 }
+
+- (BOOL) checkIfEmpty:(NSString *)textString {
+    if ([textString isEqual:@""]) {
+        return true;
+    }else {
+        return false;
+    }
+}
+
+- (IBAction)onSignUp:(id)sender {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Text Required"message:@"Text Field is empty"preferredStyle:(UIAlertControllerStyleAlert)];
+    // create an OK action
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    [alert addAction:okAction];
+    
+    if (![self checkIfEmpty:self.userName.text] || ![self checkIfEmpty:self.password.text]) {
+        [self registerUser];
+    } else {
+        [self presentViewController:alert animated:YES completion:^{
+        // optional code for what happens after the alert controller has finished presenting
+    }];
+    }
+}
+
+
 - (IBAction)loginUser:(id)sender {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Text Required"message:@"Text Field is empty"preferredStyle:(UIAlertControllerStyleAlert)];
+    // create an OK action
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    [alert addAction:okAction];
+    
+    if (![self checkIfEmpty:self.userName.text] || ![self checkIfEmpty:self.password.text]) {
+        [self loginUser];
+    } else {
+        [self presentViewController:alert animated:YES completion:^{
+        // optional code for what happens after the alert controller has finished presenting
+    }];
+    }
 }
 
 /*
