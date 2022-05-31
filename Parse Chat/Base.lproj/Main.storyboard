@@ -70,11 +70,74 @@
                     <connections>
                         <outlet property="password" destination="CjM-uk-joV" id="7HJ-zF-dD0"/>
                         <outlet property="userName" destination="IY7-Ut-c2K" id="hda-8G-sKA"/>
+                        <segue destination="bWr-6y-Ue2" kind="presentation" id="oYJ-9L-5Yt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="122" y="124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="coL-to-Xei">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bWr-6y-Ue2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AXs-CE-95Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4n5-TM-nZO" kind="presentation" id="VRn-JY-1wu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yxP-xd-c5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818.84057971014499" y="123.88392857142857"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="Usu-5R-roG">
+            <objects>
+                <viewController id="4n5-TM-nZO" customClass="ChatViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GpA-FL-2Pg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3Z-67-TrD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Chat" id="CJO-aU-EwR"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sq6-Hg-aKb">
+                                <rect key="frame" x="8" y="68" width="310" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="if6-yz-30X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gis-lN-y9z">
+                                <rect key="frame" x="326" y="69.5" width="80" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Send"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fDw-es-y9o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Sq6-Hg-aKb" firstAttribute="leading" secondItem="fDw-es-y9o" secondAttribute="leading" constant="8" id="0v4-b5-aMC"/>
+                            <constraint firstItem="Gis-lN-y9z" firstAttribute="centerY" secondItem="Sq6-Hg-aKb" secondAttribute="centerY" id="FKa-g4-DHy"/>
+                            <constraint firstItem="fDw-es-y9o" firstAttribute="trailing" secondItem="Gis-lN-y9z" secondAttribute="trailing" constant="8" id="aS3-fa-UfC"/>
+                            <constraint firstItem="Sq6-Hg-aKb" firstAttribute="top" secondItem="GpA-FL-2Pg" secondAttribute="top" constant="68" id="dQd-q1-6D0"/>
+                            <constraint firstItem="Gis-lN-y9z" firstAttribute="leading" secondItem="Sq6-Hg-aKb" secondAttribute="trailing" constant="8" id="uBD-a0-Hg0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BRK-4a-vRK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1625" y="124"/>
         </scene>
     </scenes>
     <resources>

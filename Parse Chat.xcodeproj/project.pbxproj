@@ -15,6 +15,7 @@
 		CFDB5010284540FD00FB85CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDB500E284540FD00FB85CE /* LaunchScreen.storyboard */; };
 		CFDB5013284540FD00FB85CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDB5012284540FD00FB85CE /* main.m */; };
 		CFDB501B2845481A00FB85CE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDB501A2845481A00FB85CE /* LoginViewController.m */; };
+		CFE1BCAD28469DD300FAB5C2 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE1BCAC28469DD300FAB5C2 /* ChatViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		CFDB5012284540FD00FB85CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CFDB50192845481A00FB85CE /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		CFDB501A2845481A00FB85CE /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CFE1BCAB28469DD300FAB5C2 /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		CFE1BCAC28469DD300FAB5C2 /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		D4CC013BA2E3715220CCE76C /* Pods-Parse Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse Chat.debug.xcconfig"; path = "Target Support Files/Pods-Parse Chat/Pods-Parse Chat.debug.xcconfig"; sourceTree = "<group>"; };
 		ED20BD2D53391ED10C82DC6C /* Pods-Parse Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse Chat.release.xcconfig"; path = "Target Support Files/Pods-Parse Chat/Pods-Parse Chat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +99,8 @@
 				CFDB5012284540FD00FB85CE /* main.m */,
 				CFDB50192845481A00FB85CE /* LoginViewController.h */,
 				CFDB501A2845481A00FB85CE /* LoginViewController.m */,
+				CFE1BCAB28469DD300FAB5C2 /* ChatViewController.h */,
+				CFE1BCAC28469DD300FAB5C2 /* ChatViewController.m */,
 			);
 			path = "Parse Chat";
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			files = (
 				CFDB5002284540FB00FB85CE /* AppDelegate.m in Sources */,
 				CFDB5013284540FD00FB85CE /* main.m in Sources */,
+				CFE1BCAD28469DD300FAB5C2 /* ChatViewController.m in Sources */,
 				CFDB5005284540FB00FB85CE /* SceneDelegate.m in Sources */,
 				CFDB501B2845481A00FB85CE /* LoginViewController.m in Sources */,
 			);
