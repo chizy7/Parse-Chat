@@ -126,6 +126,9 @@
                                                 <constraint firstItem="H3z-ep-bg1" firstAttribute="leading" secondItem="lCN-XG-JYs" secondAttribute="leading" constant="8" id="zYN-mB-ywk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageLabel" destination="H3z-ep-bg1" id="xTE-YB-YRU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

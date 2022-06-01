@@ -7,6 +7,7 @@
 
 #import "ChatViewController.h"
 #import <Parse/Parse.h>
+#import "ChatCell.h""
 
 @interface ChatViewController () <UITableViewDataSource>
 
@@ -36,6 +37,7 @@
         if (messages != nil) {
             // do something with the array of object returned by the call
             self.allMessages = messages;
+            [self.tableView reloadData];
         } else {
             NSLog(@"%@", error.localizedDescription);
         }
@@ -59,13 +61,17 @@
 // 1) numberOfRowsInSection
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // TODO: Configure to return number of rows for the chat messages
-    return 0;
+    return self.allMessages.count;
 }
 
 // 2) cellForRowAtIndexPath
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // TODO: Update to configure and return a custom cell
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    ChatCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell"];
+    PFObject *message = self.allMessages[indexPath.row];
+    
+    cell.messageLabel.text = message[@"text"];
+    
     return cell;
 }
 
