@@ -6,8 +6,11 @@
 //
 
 #import "ChatViewController.h"
+#import <Parse/Parse.h>
 
 @interface ChatViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *messageField;
 
 @end
 
@@ -16,6 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (IBAction)onSendMessage:(id)sender {
+    PFObject *chatMessage = [PFObject objectWithClassName:@"Message_FBU2021"];
+    chatMessage[@"text"] = self.messageField.text;
+    [chatMessage saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            if (succeeded) {
+                NSLog(@"The message was saved!");
+                self.messageField.text = nil;
+            } else {
+                NSLog(@"Saving the message failed.");
+            }
+    }];
 }
 
 /*
