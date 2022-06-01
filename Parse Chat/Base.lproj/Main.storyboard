@@ -80,7 +80,7 @@
         <!--Chat-->
         <scene sceneID="lJn-gj-gN5">
             <objects>
-                <viewController id="p5I-Nv-yS2" customClass="ChatViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="p5I-Nv-yS2" customClass="ChatViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PVd-TM-BtB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,21 +113,33 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3z-ep-bg1">
-                                                    <rect key="frame" x="8" y="8" width="398" height="126"/>
+                                                    <rect key="frame" x="8" y="37" width="398" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAP-nH-Xto">
+                                                    <rect key="frame" x="8" y="8" width="398" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="H3z-ep-bg1" firstAttribute="top" secondItem="lCN-XG-JYs" secondAttribute="top" constant="8" id="8cE-Ex-gis"/>
-                                                <constraint firstAttribute="bottom" secondItem="H3z-ep-bg1" secondAttribute="bottom" constant="8" id="N6y-Aq-Sr9"/>
+                                                <constraint firstItem="jAP-nH-Xto" firstAttribute="leading" secondItem="lCN-XG-JYs" secondAttribute="leading" constant="8" id="2av-Wp-mTo"/>
+                                                <constraint firstItem="jAP-nH-Xto" firstAttribute="leading" secondItem="H3z-ep-bg1" secondAttribute="leading" id="4el-1M-Oeh"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="H3z-ep-bg1" secondAttribute="bottom" constant="8" id="N6y-Aq-Sr9"/>
+                                                <constraint firstItem="H3z-ep-bg1" firstAttribute="top" secondItem="jAP-nH-Xto" secondAttribute="bottom" constant="8" id="UCd-8o-sPu"/>
+                                                <constraint firstItem="jAP-nH-Xto" firstAttribute="top" secondItem="lCN-XG-JYs" secondAttribute="top" constant="8" id="W7R-xd-33I"/>
+                                                <constraint firstAttribute="trailing" secondItem="jAP-nH-Xto" secondAttribute="trailing" constant="8" id="hGn-xU-2L4"/>
                                                 <constraint firstAttribute="trailing" secondItem="H3z-ep-bg1" secondAttribute="trailing" constant="8" id="rbk-5J-fkZ"/>
+                                                <constraint firstItem="jAP-nH-Xto" firstAttribute="leading" secondItem="H3z-ep-bg1" secondAttribute="leading" id="yMo-4i-QMe"/>
                                                 <constraint firstItem="H3z-ep-bg1" firstAttribute="leading" secondItem="lCN-XG-JYs" secondAttribute="leading" constant="8" id="zYN-mB-ywk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="messageLabel" destination="H3z-ep-bg1" id="xTE-YB-YRU"/>
+                                            <outlet property="usernameLabel" destination="jAP-nH-Xto" id="Bo5-tZ-7D8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -161,7 +173,7 @@
         <!--Navigation Controller-->
         <scene sceneID="HsW-4D-OCH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kDS-hs-MmC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ChatNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="kDS-hs-MmC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="q2P-V7-TcO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
